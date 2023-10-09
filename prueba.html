@@ -1,0 +1,28 @@
+<DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Prueba">
+	<meta name="keywords" content="HTML">
+	<meta name="author" content="Daniel">
+	 <style>
+  body {background-color: #52BE80;}
+  h1 {color: red;}
+  p {color: lightgreen;}
+</style>
+		<title> Hola mundo </title>
+	</head>
+	<body onload="Saludo()">
+	<h1 id="titulo" onclick="cambia_color()">Hola mundo</h1>
+	<p>La vida es una tombola</p>
+	<script>
+
+		function Saludo() {
+			alert("Bienvenido a todos, estos es una prueba");
+		}
+		function cambia_color(){
+			document.getElementById("titulo").style.color="darkgreen"
+		}
+	</script>
+	</body>
+</html>
