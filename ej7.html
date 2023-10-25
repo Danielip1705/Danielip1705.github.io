@@ -23,8 +23,8 @@
 			<input name="momento[]" id="momento" type="checkbox" value="cena"> Cena<br>
 			<input name="momento[]" id="momento" type="checkbox" value="postre"> Postre<br>
 		
-		<label for="ingredientes[]">Ingredientes</label><br>
-		<select id="ingredientes" name="ingredientes" multiple >
+		<label for="ingredientes">Ingredientes</label><br>
+		<select id="ingredientes" name="ingredientes[]" multiple >
 			<optgroup label="Carne">
 				<option>Ternera</option>
 				<option>Pollo</option>
@@ -55,21 +55,21 @@
 
 		<label>Tiempo de preparacion aproximado</label><br>
 
-		<input type="radio" name="horas[]">
+		<input type="radio" name="horas"value="0">
 		<label>0 horas</label>
-		<input type="radio" name="horas[]">
+		<input type="radio" name="horas"value="1">
 		<label>1 hora</label>
-		<input type="radio" name="horas[]">
+		<input type="radio" name="horas"value="2">
 		<label>2 horas</label><br>
-		<input type="radio" name="minutos[]">
+		<input type="radio" name="minutos"value="0">
 		<label>0 minutos</label>
-		<input type="radio" name="minutos[]">
+		<input type="radio" name="minutos"value="15">
 		<label>15 minutos</label>
-		<input type="radio" name="minutos[]">
+		<input type="radio" name="minutos"value="30">
 		<label>30 minutos</label>
-		<input type="radio" name="minutos[]">
+		<input type="radio" name="minutos"value="45">
 		<label>45 minutos</label>
-		<input type="radio" name="minutos[]">
+		<input type="radio" name="minutos" value="60">
 		<label>60 minutos</label>
 		<br>
 
@@ -79,5 +79,6 @@
 	</fieldset>
 	<input type="submit" name="enviar" value="enviar">
 </form>
+<a href="index.html">Volver al Index</a>
 </body>
 </html>
