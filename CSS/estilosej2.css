@@ -1,0 +1,26 @@
+div{
+	height: 200px;
+	width: 200px;
+}
+#div1{
+	background-image: url(../img/a.jpg);
+	background-repeat: no-repeat;
+	background-size: 50px;
+	background-position: center center;
+	border: 5px solid red;
+}
+#div2{
+background-image: url(../img/a.jpg);
+background-size: 50px;
+background-repeat: repeat-x;
+background-position: left right;
+background-position: bottom;
+border: 3px solid darkblue;
+}
+#div3{
+background-image: url(../img/a.jpg);
+background-size: 50px;
+background-repeat: repeat-y;
+background-position: right top;
+border: 3px solid green;
+}
