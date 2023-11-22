@@ -1,12 +1,40 @@
+/* 2º tabla */
+.table{
+	border: solid 1px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.td{
+	padding: 10px;
+	border: solid 1px;
+	width: 250px;
+}
+/* 3º Tabla */
+.divmargin{
+	padding: 15px;
+	width: 250px;
+
+}
 #div1{
-border: solid 1px;
-
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
 }
-
-#div2{
-
-}
-p{
+#table{
 	border: solid 1px;
 	display: inline-block;
+	padding-right: 2px;
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
 }
+#div2{
+	margin-top: 4px;
+}
+#td{
+border: solid 1px;
+display: inline-block;
+margin-left: 1px;
+}
+
+

@@ -1,0 +1,14 @@
+#caja{
+	border: solid 3px;
+	width: 300px;
+	margin: 20px;
+	padding: 10px;
+	background-color: salmon;
+}
+.flex-container{
+	display: flex;
+	border: solid 1px;
+	background-color: lightcyan;
+	flex-direction: row;
+	
+}
