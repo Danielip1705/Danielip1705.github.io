@@ -5,10 +5,38 @@
 	padding: 10px;
 	background-color: salmon;
 }
+#caja{
+	transition: all;
+	transition-duration: 0.5;
+}
+#caja:hover{
+	background-color: green;
+
+}
 .flex-container{
 	display: flex;
-	border: solid 1px;
-	background-color: lightcyan;
-	flex-direction: row;
-	
+	flex-wrap: wrap;
+
 }
+p{
+	font-family: 'Lobster', sans-serif;
+}
+.flex-item{
+	display: flex;
+	background-color: lightblue;
+	border: solid 1px;
+	width: 30%; 
+	margin: 5px;
+
+}
+@media (width < 600px) and (orientation: landscape)   {
+	#caja{
+		background-color: green;
+	}
+	p{
+		font-size: small;
+		margin: 2.5px;
+		padding: 2.5px ;
+		}
+}
+

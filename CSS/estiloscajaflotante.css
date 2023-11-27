@@ -1,3 +1,12 @@
-.flex-container{
-	
+div{
+	height: 300px;
+	width: 300px;
+	background: green;
+	transition-property: all;
+  	transition-duration: 1s;
+  	transition-timing-function: linear;
+}
+div:hover{
+	padding: 32px;
+	background: skyblue;
 }
