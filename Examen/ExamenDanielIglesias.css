@@ -1,0 +1,33 @@
+h1, p, a{
+	font-family: 'Noto Sans JP', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+}
+h1{
+color: darkred;
+border: solid darkred 1px;
+font-style: italic;
+font-weight: bold;
+padding: 15px;
+border-start-start-radius: 20px;
+border-start-end-radius: 20px;
+}
+p{
+	text-align: justify;
+}
+img{
+	width: 125px;
+	height: 125px;
+	float: right;
+}
+video{
+	display: block;
+	margin: auto;
+	width: 300px;
+	height: 200px;
+}
+a{
+	padding-top: 20px;
+display: table;
+margin: auto;
+}
