@@ -4,7 +4,6 @@ div{
 	background: green;
 	transition-property: all;
   	transition-duration: 1s;
-  	transition-timing-function: linear;
 }
 div:hover{
 	padding: 32px;

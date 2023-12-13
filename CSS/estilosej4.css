@@ -28,7 +28,7 @@ p{
 	margin: 5px;
 
 }
-@media (width < 600px) and (orientation: landscape)   {
+@media (max-width: 600px) {
 	#caja{
 		background-color: green;
 	}
