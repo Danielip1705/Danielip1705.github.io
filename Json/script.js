@@ -27,7 +27,7 @@ function obtenerUsuarios() {
 }
 
 function mostrarUsuarios(usuarios) {
-    var resultado = document.getElementById("resultado");
+    var resultado = document.getElementByID("resultado");
     resultado.innerHTML = "<h2>Usuarios</h2>";
 
     // Crear una lista de usuarios
