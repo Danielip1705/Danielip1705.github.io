@@ -25,10 +25,10 @@ function mostrarDatos(albunes) {
     resultadoX.innerHTML = "<h1>Datos Obtenidos</h1>";
 
     var listaDatos = "<ul>";
-    albunes.forEach(function (album) {
-        listaDatos += "<li><strong> ID" + album.albumId + "</strong><strong> Titulo: " + album.title + "</strong></li>";
+    albunes.forEach(function(album) {
+        listaDatos += "<li><strong> ID" + album.albumId + "</strong><strong> Titulo: " + album.title + "</strong><img"+ album.url "> </li>";
     });
-
     listaDatos += "</ul>";
+    
     resultadoX.innerHTML += listaDatos;
 }
