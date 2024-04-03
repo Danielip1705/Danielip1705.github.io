@@ -8,4 +8,14 @@ function datosDinamicos() {
 	}
 
 	$("tbody").append("<tr>" + "<td>"+persona.nombre+"</td><td>"+persona.apellido+"</td><td>"+persona.edad+"</td><td>"+persona.ciudad+"</td>");
+
+	calculoSuma();
 }
+
+function calculoSuma() {
+
+	let suma= 0;
+	suma + parseInt(edad);
+	document.getElementById("suma").innerHTML = suma;
+}
+

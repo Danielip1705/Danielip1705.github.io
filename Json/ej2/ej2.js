@@ -1,6 +1,6 @@
 function mostrarTabla() {
 	
-	let persona ={
+	let persona = {
 	nombre : "Daniel",
 	apellidos : "Iglesias",
 	edad : "18",
@@ -8,7 +8,10 @@ function mostrarTabla() {
 	}
 
 	document.getElementById("nombre").innerHTML = persona.nombre;
+
 	document.getElementById("apellidos").innerHTML = persona.apellidos;
+
 	document.getElementById("edad").innerHTML = persona.edad;
+
 	document.getElementById("ciudad").innerHTML = persona.ciudad;
 }
