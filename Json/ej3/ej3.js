@@ -22,6 +22,7 @@ function datosDinamicos() {
 		generaTR(persona);
 
 		fila.push(persona);
+
 		console.log(fila)
 		calculos(persona);
 
@@ -43,12 +44,11 @@ function alerta(persona) {
 
 function generaTR(persona){
 
-	$("tbody").append("<tr>" + 
+	$("tbody").append("<tr id=\"fila.length\">" + 
 	"<td>"+persona.nombre+"</td><td>"+
 	persona.apellido+"</td><td>"+
 	persona.edad+"</td><td>"+
-	persona.ciudad+"</td>"
-	+ "<td><button onclick"+"calc.i"+"/></td>");
+	persona.ciudad+"</td>");
 }
 
 //nota: hay que crear array de filas y realizar un push cada vez
