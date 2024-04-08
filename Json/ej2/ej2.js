@@ -7,6 +7,11 @@ function mostrarTabla() {
 	ciudad: "Sevilla"
 	}
 
+	generarDatos(persona);
+}
+
+function generarDatos(persona){
+
 	document.getElementById("nombre").innerHTML = persona.nombre;
 
 	document.getElementById("apellidos").innerHTML = persona.apellidos;
