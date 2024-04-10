@@ -1,4 +1,5 @@
 
+//Objeto cacl que contiene los atributos en la que se realizara las operacion
 let calc = {
 	suma:0,
 	media:0,
@@ -8,6 +9,7 @@ let calc = {
 }
 
 let fila = [];
+//Funcion principal que ejecutara instrucciones y funciones del sricp
 function datosDinamicos() {
 	//Objeto persona con valores
 	let persona = {
@@ -18,6 +20,7 @@ function datosDinamicos() {
 	}
 	//si el resultado de alerta es distinto de true,
 	if(!alerta(persona)){
+		
 		//Crearemos tr y haremos los calculos de las edades
 		generaTR(persona);
 
@@ -26,12 +29,9 @@ function datosDinamicos() {
 		console.log(fila)
 		calculos(persona);
 
-	}
-		
-
-		
+	}		
 }
-
+//Funcion que muestra una alerta si todos los campos no estan llenos
 function alerta(persona) {
 	let valido = false;
 	if (persona.nombre=="" || persona.apellido=="" || persona.edad==""
@@ -42,18 +42,22 @@ function alerta(persona) {
 	return valido;
 }
 
+//Funcion que genera el tr
 function generaTR(persona){
 
-	$("tbody").append("<tr id=\"fila.length\">" + 
+	$("tbody").append("<tr>" +
 	"<td>"+persona.nombre+"</td><td>"+
 	persona.apellido+"</td><td>"+
 	persona.edad+"</td><td>"+
-	persona.ciudad+"</td>");
+	persona.ciudad+"</td>"+
+	"</tr>");
 }
+
 
 //nota: hay que crear array de filas y realizar un push cada vez
 function eliminarTabla(){
-$("#cacl.i")
+	
+
 }
 //Funcion que calcula la suma,media,maximo,minimo
 function calculos(persona) {
@@ -75,10 +79,12 @@ calc.maximo = parseInt(persona.edad);
 $("#maximo").text("Maximo: " + calc.maximo)
 }
 
+//Operacion para realizar el minimo
 if(calc.minimo>parseInt(persona.edad)){
 calc.minimo = parseInt(persona.edad)
 $("#minimo").text("Minimo: " + calc.minimo)
 }
+
 calc.i++;
 }
 

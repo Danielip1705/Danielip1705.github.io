@@ -3,9 +3,41 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+	<title>Ejercicio 3</title>
+	<script src="ej4.js"></script>
 </head>
 <body>
 
+<h1>Ejercicio 4: Datos Dinamicos</h1>
+
+	<input type="text" id="inNom" placeholder="Nombre">
+	<input type="text" id="inAp" placeholder="Apellido">
+	<input type="text" id="inEd" placeholder="Edad">
+	<input type="text" id="inCi" placeholder="Ciudad">
+
+	<button onclick="datosDinamicos()" >Botón</button>
+	<table border="1">
+		<thead>
+		<tr>
+			<td>Nombre</td>
+			<td>Apellido</td>
+			<td>Edad</td>
+			<td>Ciudad</td>
+		</tr>
+	</thead>
+	<tbody id="inicio">
+		
+	</tbody>
+
+	</table>
+		
+	<p id="suma"></p>
+	<p id="media"></p>
+	<p id="maximo"></p>
+	<p id="minimo"></p>
 </body>
 </html>
