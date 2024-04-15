@@ -7,8 +7,6 @@ let calc = {
 	maximo:-999,
 	i:1
 }
-
-let fila = [];
 //Funcion principal que ejecutara instrucciones y funciones del sricp
 function datosDinamicos() {
 	//Objeto persona con valores
@@ -23,10 +21,6 @@ function datosDinamicos() {
 		
 		//Crearemos tr y haremos los calculos de las edades
 		generaTR(persona);
-
-		fila.push(persona);
-
-		console.log(fila)
 		calculos(persona);
 
 	}		
