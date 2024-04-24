@@ -44,7 +44,7 @@ function generarTabla() {
             "<td>" + element.nombre + "</td><td>" +
             element.apellido + "</td><td>" +
             parseInt(element.edad) + "</td><td>" +
-            element.ciudad + "</td><td><button onclick='borrar()'>Borrar</td>" +
+            element.ciudad + "</td><td><button onclick=borrar()>Borrar</td>" +
             "</tr>");
 			i++
     });
