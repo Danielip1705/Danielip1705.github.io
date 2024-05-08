@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4 RETO</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    
+    <h1>Ejercicio 4 RETO</h1>
+
+    <h2>Envio de datos a una base de datos</h2>
+
+    <h2 style="font-weight: bold; color: red;" id="ErrorConexion"></h2>
+    <p>INSERTAR ID:</p>
+
+    <input type="number" id="id">
+
+    <p>INSERTAR DESCRIPCIÓN:</p>
+
+    <input type="text" id="descripcion">
+
+    <p>INSERTAR ID DEL PROVEEDOR:</p>
+
+    <input type="number" id="idProveedor">
+
+    <p>INSERTAR PRECIO:</p>
+
+    <input type="number" id="precio">
+
+    <br>
+    <button onclick="iniciarEjercicio4()">Enviar</button>
+
+
+    <div></div>
+    <script>
+
+        let datosObtenidos
+    function iniciarEjercicio4(){
+
+        let datos = {
+            id: $("#id").val(),
+            descripcion :$("#descripcion").val(),
+            idProveedor: $("#idProveedor").val(),
+            precio: $("#precio").val()
+        }
+
+        console.log(datos.id)
+        console.log(datos.descripcion)
+        console.log(datos.idProveedor)
+        console.log(datos.precio)
+
+        envio(datos)
+
+    }
+
+    function envio(objeto_js){
+   	const xhr = new XMLHttpRequest();
+   	xhr.open("POST", "https://lm.iesnervion.es/reto4.php");
+	xhr.responseType = "json"; // Si no se indica, necesitará parseo
+
+   	xhr.onload = function() {
+       	if (xhr.readyState == 4 && xhr.status == 200) { // 200 || 201
+           	console.log(xhr.response);
+       	} else {
+           	console.log("Error: ${xhr.status}");
+            $("#ErrorConexion").text("Se ha producido un error de conexion")
+       	}
+   	};
+   	xhr.send((JSON.stringify(objeto_js)));
+}
+
+
+
+    </script>
+    </div>
+</body>
+</html>
