@@ -32,11 +32,29 @@
     <br>
     <button onclick="iniciarEjercicio4()">Enviar</button>
 
+    <table border="1">
+        <thead>
+
+            <tr>
+                <td>ID</td>
+                <td>Descripcion</td>
+                <td>ID proveedor</td>
+                <td>precio</td>
+            </tr>
+
+
+        </thead>
+        <tbody id="agregarFila">
+
+
+        </tbody>
+    </table>
 
     <div></div>
     <script>
 
         let datosObtenidos
+        //Funcion principal que utilizara todas las funciones en la pag web
     function iniciarEjercicio4(){
 
         let datos = {
@@ -55,6 +73,8 @@
 
     }
 
+    //Funcion que envia un objeto json y donde devuelve el servidor
+    //Un array con productos
     function envio(objeto_js){
    	const xhr = new XMLHttpRequest();
    	xhr.open("POST", "https://lm.iesnervion.es/reto4.php");
@@ -63,6 +83,8 @@
    	xhr.onload = function() {
        	if (xhr.readyState == 4 && xhr.status == 200) { // 200 || 201
            	console.log(xhr.response);
+            nuevafila(xhr.response.lista)
+            $("#ErrorConexion").text(xhr.response.error)
        	} else {
            	console.log("Error: ${xhr.status}");
             $("#ErrorConexion").text("Se ha producido un error de conexion")
@@ -71,7 +93,30 @@
    	xhr.send((JSON.stringify(objeto_js)));
 }
 
+//Funcion que crea una nueva fila con el array extraido del servidor
+function nuevafila(lista) {
 
+console.log(lista)
+
+    lista.forEach(valor => {
+
+     $("#agregarFila").append(generaTr(valor));
+    
+    });
+
+}
+
+
+//Funcion para generar una tabla
+function generaTr(dato) {
+
+    return "<tr id='fila-" + dato.id + "'>" +
+        "<td>" + dato.id + "</td>" +
+        "<td>" + dato.descripcion + "</td>" +
+        "<td>" + dato.idProveedor + "</td>" +
+        "<td>" + dato.precio + "</td>" +
+        "</tr>"
+}
 
     </script>
     </div>
